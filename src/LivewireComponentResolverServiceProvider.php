@@ -42,6 +42,6 @@ class LivewireComponentResolverServiceProvider extends ServiceProvider
 
     private function bootResolver(): void
     {
-        Livewire::resolveMissingComponent(LivewireComponentResolver::resolve(...));
+        Livewire::resolveMissingComponent(Resolver::resolve(...));
     }
 }

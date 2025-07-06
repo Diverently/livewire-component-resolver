@@ -4,7 +4,7 @@ namespace Diverently\LivewireComponentResolver;
 
 use Livewire\Exceptions\ComponentNotFoundException;
 
-class LivewireComponentResolver
+class Resolver
 {
     public static function register(string $alias, string $namespace): void
     {

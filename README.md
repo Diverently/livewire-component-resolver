@@ -62,9 +62,9 @@ return [
 You can register a namespace for your Livewire components either through the config (see above) or at runtime:
 
 ```php
-use Diverently\LivewireComponentResolver\LivewireComponentResolver;
+use Diverently\LivewireComponentResolver\Resolver;
 
-LivewireComponentResolver::register('blog', 'Modules\\Blog\\Livewire');
+Resolver::register('blog', 'Modules\\Blog\\Livewire');
 ```
 
 Then you can reference components like `blog::post.show` in your views.
@@ -103,11 +103,11 @@ return [
 A more dynamic option would be to register the namespace in each module's service provider, for example in `Modules/Blog/Providers/BlogServiceProvider.php`:
 
 ```php
-use Diverently\LivewireComponentResolver\LivewireComponentResolver;
+use Diverently\LivewireComponentResolver\Resolver;
 
 public function boot()
 {
-    LivewireComponentResolver::register($this->moduleNameLower, 'Modules\\Blog\\Livewire');
+    Resolver::register($this->moduleNameLower, 'Modules\\Blog\\Livewire');
 }
 ```
 
